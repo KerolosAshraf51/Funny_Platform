@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(#3498db, #2c3e50);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Press Start 2P";
+}
+
+#game-board {
+    background: rgba(27, 20, 20, 0.5);
+    width: 80vmin;
+    height: 80vmin;
+    display: grid;
+    grid-template-columns: repeat(21, 1fr);
+    grid-template-rows: repeat(21, 1fr);
+    border: 5px solid rgb(6, 6, 6);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: filter 0.3s ease;
+}
+
+.scoreboard {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.score, .high-score {
+    background: rgba(0, 0, 0, 0.7);
+    color: #3498db;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.snake {
+    background: linear-gradient(#8e44ad, #3498db);
+    border: 0.35vmin solid black;
+    border-radius: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.food {
+    background: radial-gradient(circle, orange, red);
+    width: 20px;
+    height: 20px;
+    border: 0.25vmin solid black;
+    border-radius: 50%;
+}
+
+.play-again {
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(#ffcc00, #ff3300);
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    display: none;
+}
+
+.play-again:hover {
+    background: linear-gradient(#ff3300, #ffcc00);
+    transform: scale(1.2);
+}
+
+.blur {
+    filter: blur(8px);
+}
+
+.high-score-message {
+    font-size: 1.5em;
+    color: #4caf50;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .scoreboard {
+        font-size: 1rem;
+        top: 10px;
+        right: 10px;
+    }
+
+    .play-again {
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .high-score-message {
+        font-size: 1.2em;
+    }
+}

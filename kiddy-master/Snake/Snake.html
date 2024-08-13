@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="icon" type="icon" href="images\616653.png" />
+    <link rel="stylesheet" href="style.css">
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  
+</head>
+<body>
+    <div id="game-board" class="game-board"></div>
+    <div class="scoreboard">
+        <div id="score" class="score">Score: 0</div>
+        <div id="high-score" class="high-score">High Score: 0</div>
+    </div>
+    <div id="high-score-message" class="high-score-message" style="display:none;">New High Score: <span id="new-high-score"></span>!</div>
+    <button id="play-again" class="play-again" style="display:none;">Play Again</button>
+    <audio id="eat-sound" src="eating.mp3"></audio>
+    <script src="game.js"></script>
+</body>
+</html>
